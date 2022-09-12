@@ -1,13 +1,13 @@
+if [ "$(apk -e info wget)" == "" ]; then apk add wget; fi
 echo Enter your desired repo:
 read user_repo
 var1="${user_repo}/Packages"
 wget $var1
 echo Enter your desired package name:
 read user_package
-$user_package
-grep $user_package Packages
+grep -i $user_package Packages
 echo Enter the filename of your package:
 read package_filename
-var2="${user_repo}/${user_package}"
+var2="${user_repo}/${package_filename}"
 wget -r $var2
 rm Packages
