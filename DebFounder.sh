@@ -55,19 +55,29 @@ try10="${var1}/dists/iphoneos-arm64/1800/main/binary-iphoneos-arm/Packages.gz"
 try11="${var1}/dists/iphoneos-arm64/1800/main/binary-iphoneos-arm/Packages.xz"
 try12="${var1}/dists/iphoneos-arm64/1800/main/binary-iphoneos-arm/Packages.zst"
 echo Getting package list..
-curl -k -L -f -O $try1 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try2 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try3 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try4 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try5 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try6 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try7 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try8 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try9 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try10 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try11 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try12 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null ||
+curl -k -L -f -O $try1 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try2 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try3 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try4 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try5 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try6 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try7 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try8 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try9 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try10 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try11 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null || curl -k -L -f -O $try12 -H 'X-Machine: iPhone14,3' -H 'X-Unique-ID: da39a3ee5e6b4b0d3255bfef95601890afd80709' 2> /dev/null
 RESULT=$?
 if
-	[ "$RESULT" == "" ]
+	[ "$RESULT" == "0" ]
 		then
-			echo "Succeed getting package list"
+			:
 		else
 			echo "Failed getting package list. Check your repo!"
-			exit
+				exit
 fi
 
 #Decompressing package file
-bzip2 -d Packages.bz2 2> /dev/null || gzip -d Packages.gz 2> /dev/null || xz -d Packages.xz || zstd -d Packages.zst && rm -f Packages.zst
+bzip2 -d Packages.bz2 2> /dev/null || gzip -d Packages.gz 2> /dev/null || xz -d Packages.xz 2> /dev/null || zstd -d Packages.zst 2> /dev/null && rm -f Packages.zst
+RESULT=$?
+if
+	[ "$RESULT" == "0" ]
+		then
+			:
+		else
+			echo "Failed decompressing file, file is invalid"
+			rm -f Packages.bz2 Packages.gz Packages.xz Packages.zst
+				exit
+fi
 
 #Getting package name
 echo "Enter your package name: (It's better if you entered the bundle id!)"
