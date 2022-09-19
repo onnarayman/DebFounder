@@ -1,5 +1,5 @@
 # DebFounder
-A very simple script that you can use on your jailed iOS device to download deb files from Cydia repositories using iSH app.
+A very simple shell script to download iOS/iPadOS .deb files with iSH app and with no need to jailbreak your device.
 
 -----------------
 # How To Use?
@@ -9,9 +9,10 @@ A very simple script that you can use on your jailed iOS device to download deb 
 4. ``./DebFounder``
 5. Enter the repo you want to download from.
 6. Enter the package name you want to download.
-7. From the output copy the path after "Filename" and enter it.
-8. Now your deb has been downloaded in root directory.
+7. Now your deb has been downloaded in root directory.
 
 -----------------
 # Notice
-Some repos like Dynastic repo are not supported yet!
+~~Some repos like Dynastic repo are not supported yet!~~
+
+Almost all repos are supported now!
