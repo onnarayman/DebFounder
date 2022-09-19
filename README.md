@@ -5,8 +5,8 @@ DebFounder is a script to download iOS/iPadOS .deb files with iSH app with no ne
 # How To Use?
 1. Import DebFounder file to iSH app root directory.
 2. Open iSH app then run:
-3. ``chmod +x DebFounder``
-4. ``./DebFounder``
+3. ``chmod +x DebFounder.sh``
+4. ``./DebFounder.sh``
 5. Enter the repo you want to download from.
 6. Enter the package name you want to download.
 7. Now your deb has been downloaded in root directory.
