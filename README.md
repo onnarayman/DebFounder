@@ -1,5 +1,5 @@
 # DebFounder
-A very simple shell script to download iOS/iPadOS .deb files with iSH app and with no need to jailbreak your device.
+A very simple shell script to download iOS/iPadOS .deb files with iSH app with no need to jailbreak your device.
 
 -----------------
 # How To Use?
