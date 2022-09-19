@@ -1,5 +1,5 @@
 # DebFounder
-A very simple shell script to download iOS/iPadOS .deb files with iSH app with no need to jailbreak your device.
+DebFounder is a script to download iOS/iPadOS .deb files with iSH app with no need to jailbreak your device.
 
 -----------------
 # How To Use?
@@ -16,3 +16,5 @@ A very simple shell script to download iOS/iPadOS .deb files with iSH app with n
 ~~Some repos like Dynastic repo are not supported yet!~~
 
 Almost all repos are supported now!
+
+If you faced any problem with some repo feel free to contact me.
